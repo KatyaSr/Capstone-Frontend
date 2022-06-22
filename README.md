@@ -1,4 +1,9 @@
 # Capstone-Final
+# To set up React app
+
+https://reactjs.org/docs/create-a-new-react-app.html
+
+# Everyone will need to create a separate branch and work on that branch (not in the main branch).
 
 # Getting Started with Create React App
 
