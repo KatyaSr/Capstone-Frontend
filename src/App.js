@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import "./App.css";
 import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
@@ -10,35 +10,39 @@ import Grid from '@mui/material/Grid';
 
 function App() {
   return (
-    <div>
+    <div className='sign-in-container'>
       <Typography component="h1" variant="h5">
         Sign In
       </Typography>
+      <div className='container-textfield'>
       <TextField
         label="Username"
         required
-        fullWidth
         name="username"
+        fullWidth
         autoComplete="username"
         autoFocus
       />
+      </div>
+      <div className='container-textfield'>
       <TextField
         label="Password"
         type="password"
         required
-        fullWidth
         name="password"
+        fullWidth
         autoComplete="current-password"
         autoFocus
       />
+      </div>
       <FormControlLabel
         control={<Checkbox value="remember" color="primary" />}
         label="Remember me"
       />
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
+      <Button type="submit" variant="contained" sx={{ mt: 2 }}>
         Sign In
       </Button>
-      <Grid container>
+      <div className='options-container'>
         <Grid item xs>
           <Link href="#" variant="body2">
             Forgot password
@@ -49,7 +53,7 @@ function App() {
             Sign Up
           </Link>
         </Grid>
-      </Grid>
+      </div>
     </div>
   );
 }
