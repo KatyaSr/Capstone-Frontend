@@ -18,3 +18,8 @@
   width:30rem;
   justify-content: space-between;
 }
+
+.columnContainer{
+  display:flex;
+  flex-direction: column;
+}

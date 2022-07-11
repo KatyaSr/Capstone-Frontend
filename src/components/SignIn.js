@@ -6,8 +6,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import {Link as NavigateLink } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
 const SignIn = (props) => {
+    const navigate = useNavigate();
     return (
         <div className='sign-in-container'>
             <Typography component="h1" variant="h5">
@@ -38,19 +41,19 @@ const SignIn = (props) => {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
             />
-            <Button type="submit" variant="contained" sx={{ mt: 2 }}>
+            <Button type="submit" onClick = {() =>navigate('/home')} variant="contained" sx={{ mt: 2 }}>
                 Sign In
             </Button>
             <div className='options-container'>
                 <Grid item xs>
-                <Link href="#" variant="body2">
+                <NavigateLink to="/Forgotpassword" variant="body2">
                     Forgot password
-                </Link>
+                </NavigateLink>
                 </Grid>
                 <Grid item>
-                <Link href="#" variant="body2">
+                <NavigateLink to="/SignUp" variant="body2">
                     Sign Up
-                </Link>
+                </NavigateLink>
                 </Grid>
             </div>
         </div>
