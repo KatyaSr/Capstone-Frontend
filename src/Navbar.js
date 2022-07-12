@@ -2,6 +2,7 @@ import React from 'react';
 import {  Link } from "react-router-dom";
 import { useState } from "react";
 import  "./navbar.css";
+/* use this command for the font, npm install --save @fortawesome/fontawesome-free*/
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons";
 const Navbar= () =>{
