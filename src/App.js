@@ -6,6 +6,7 @@ import Profile from "./components/profile";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import ForgotPassword from "./components/Forgotpassword";
+import Coverpage from "./components/Coverpage";
 
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
         <Route  path = "/Home" element = {<Home />} />
         <Route  path = "/profile" element = {<Profile />} />
         <Route  path = "/signin" element = {<SignIn />} />
-        <Route  path = "*" element = {<Navigate to="/SignIn"/>} />
+        <Route  path = "*" element = {<Navigate to="/Coverpage"/>} />
         <Route  path = "/signup" element = {<SignUp />} />
         <Route  path = "/Forgotpassword" element = {<ForgotPassword />} />
+        <Route  path = "/Coverpage" element = {<Coverpage />} />
       </Routes>
   );
 }
