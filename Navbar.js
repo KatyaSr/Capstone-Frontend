@@ -3,6 +3,7 @@ import {  Link } from "react-router-dom";
 import { useState } from "react";
 import  "./navbar.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+/*npm install --save @fortawesome/fontawesome-free*/
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons";
 const Navbar= () =>{
   const [isNavExpanded, setIsNavExpanded] = useState(false);
