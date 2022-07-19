@@ -5,8 +5,13 @@ function Home() {
     return <div className="columnContainer">
         THIS IS HOME PAGE
         <div>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile/Username">
+                Profile
+            </Link>
         </div>
+        <Link to = "/Search">
+            Search
+        </Link>
         <Link to = "/SignIn">
             back to signin
         </Link>

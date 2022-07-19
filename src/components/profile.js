@@ -1,12 +1,18 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 
 function Profile() {
+    let navigate = useNavigate();
+    let { username } = useParams();
     return <div className="columnContainer"> 
-    THIS IS profile PAGE
-    <Link to = "/Home">
-        back to home
-    </Link>
+    THIS IS profile PAGE OF {username};
+    <button onClick = {() =>navigate('/Home')}>
+        Home
+    </button>
+    <div>
+        Contact:
+        
+    </div>
     </div>;
 }
 
