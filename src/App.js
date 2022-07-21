@@ -1,14 +1,14 @@
 import React from 'react';
 import "./App.css";
-import {Navigate, Routes, Route} from 'react-router-dom'
-import Home from "./components/Home";
-import Profile from "./components/profile";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import ForgotPassword from "./components/Forgotpassword";
-import Coverpage from "./components/Coverpage";
-import Search from "./components/Search";
-import Result from "./components/Result";
+import {Navigate, BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from "./Pages/Home";
+import Profile from "./Pages/profile";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
+import ForgotPassword from "./Pages/Forgotpassword";
+import Coverpage from "./Pages/Coverpage";
+import Search from "./Pages/Search";
+import Result from "./Pages/Result";
 
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
         <Route  path = "/Result" element = {<Result />} />
         <Route  path = "/Search" element = {<Search />} />
       </Routes>
+      
   );
 }
 

@@ -2,11 +2,13 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function Search() {
+    
     let navigate = useNavigate();
     return (
-        <div className="columnContainer"> 
+        <div className='sign-in-container'> 
             THIS IS Search PAGE 
             <div className='container-textfield'>
             <TextField
@@ -18,9 +20,10 @@ function Search() {
                 autoFocus
             />
             </div>
-            <button onClick = {() =>navigate('/Result')}>
-                Search
-            </button>
+                <Button type="submit" onClick = {() =>navigate('/Search')} variant="contained" sx={{ mt: 2 }}>
+                    Search
+                </Button>
+            
             <Link to = "/Home">
                 back to home
             </Link>

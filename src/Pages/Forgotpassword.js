@@ -26,6 +26,9 @@ function Forgotpassword() {
                 autoFocus
             />
         </div >
+            <Button variant="contained" sx={{ mt: 2 }}>
+                Resend
+            </Button>
             <Button type="submit" onClick = {() =>navigate('/SignIn')} variant="contained" sx={{ mt: 2 }}>
                 Sign In
             </Button>
