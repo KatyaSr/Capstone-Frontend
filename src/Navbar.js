@@ -2,7 +2,6 @@ import React from 'react';
 import {  Link } from "react-router-dom";
 import { useState } from "react";
 import  "./navbar.css";
-/* use this command for the logo , npm install --save @fortawesome/fontawesome-free*/
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons";
 const Navbar= () =>{
@@ -53,7 +52,7 @@ const Navbar= () =>{
       <Link to="/SignIn">Sign In</Link>
     </li>
     <li>
-      <Link to="/SignUp">Sign Up</Link>
+      <Link to="/Profile">Profile</Link>
     </li>
     </ul>
     </div>
