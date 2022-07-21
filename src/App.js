@@ -1,57 +1,36 @@
 import React from 'react';
-import './style.css';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
-import Button from '@mui/material/Button';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-
+import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 
+'react-router-dom';
+import Navbar from './components/Navbar/Navbar'
+import SignIn from './pages/Navbar/SignIn';
+import SignUp from './pages/Navbar/SignUp';
+import Profile from './pages/Navbar/Profile';
+import Result from './pages/Navbar/Result';
+import Forgotpassword from './pages/Navbar/Forgotpassword';
+import Search from './pages/Navbar/Search';
 function App() {
   return (
-    <div>
-      <Typography component="h1" variant="h5">
-        Sign In
-      </Typography>
-      <TextField
-        label="Username"
-        required
-        fullWidth
-        name="username"
-        autoComplete="username"
-        autoFocus
-      />
-      <TextField
-        label="Password"
-        type="password"
-        required
-        fullWidth
-        name="password"
-        autoComplete="current-password"
-        autoFocus
-      />
-      <FormControlLabel
-        control={<Checkbox value="remember" color="primary" />}
-        label="Remember me"
-      />
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
-        Sign In
-      </Button>
-      <Grid container>
-        <Grid item xs>
-          <Link href="#" variant="body2">
-            Forgot password
-          </Link>
-        </Grid>
-        <Grid item>
-          <Link href="#" variant="body2">
-            Sign Up
-          </Link>
-        </Grid>
-      </Grid>
+    <Router>
+    <Navbar />
+    <div className='columnContainer'>
+    <div className="container">
+    <Routes>
+      {/* <Route path='/' exact component={Home} />*/}
+       <Route exact path="/SignIn" element={<SignIn />} />
+       <Route exact path='/SignUp' element={<SignUp/>} />
+       <Route exact path='/Profile' element={<Profile/>} />
+       <Route exact path='/Search' element={<Search/>} /> 
+       <Route exact path='/Result' element={<Result/>} />
+       <Route exact path='/Forgotpassword' element={<Forgotpassword/>} />
+    </Routes>
     </div>
-  );
+    </div>
+    </Router>
+     );
 }
+    export default App;
+    
+    
 
-export default App;
+
