@@ -26,11 +26,11 @@ function App() {
     </Routes>
     </div>
     </div>
-  </Router>
-  
-
-
-  );
+    </Router>
+     );
 }
-export default App;
+    export default App;
+    
+    
+
 
