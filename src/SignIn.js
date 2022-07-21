@@ -6,57 +6,61 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-const SignIn = () =>{
-    return (
+import {Link as NavigateLink } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
-        <div> 
-          
-          <Typography component="h1" variant="h5">
-          <br></br>
-            SignIn
-          </Typography>
-          <TextField
-            label="Username"
-            required
-            fullWidth
-            name="username"
-            autoComplete="username"
-            autoFocus
-          />
-          <TextField
-            label="Password"
-            type="password"
-            required
-            fullWidth
-            name="password"
-            autoComplete="current-password"
-            autoFocus
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button type="submit" fullWidth variant="contained" sx={{ mt: 2 }}>
-            Sign In
-          </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                Sign Up
-              </Link>
-            </Grid>
-          </Grid>
+const SignIn = (props) => {
+    const navigate = useNavigate();
+    return (
+      
+        <div className='sign-in-container'>
+            <Typography component="h1" variant="h5">
+                Sign In
+            </Typography>
+            <div className='container-textfield'>
+            <TextField
+                label="Username"
+                required
+                name="username"
+                fullWidth
+                autoComplete="username"
+                autoFocus
+            />
+            </div>
+            <div className='container-textfield'>
+            <TextField
+                label="Password"
+                type="password"
+                required
+                name="password"
+                fullWidth
+                autoComplete="current-password"
+                autoFocus
+            />
+            </div>
+            <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+            />
+            <Button type="submit" onClick = {() =>navigate('/home')} variant="contained" sx={{ mt: 2 }}>
+                Sign In
+            </Button>
+            <div className='options-container'>
+                <Grid item xs>
+                <NavigateLink to="/Forgotpassword" variant="body2">
+                    Forgot password
+                </NavigateLink>
+                </Grid>
+                <Grid item>
+                <NavigateLink to="/SignUp" variant="body2">
+                    Sign Up
+                </NavigateLink>
+                </Grid>
+            </div>
         </div>
         
-    
-    
-      );
-
+    );
 }
+
 export default SignIn;
 //SignIn.js
