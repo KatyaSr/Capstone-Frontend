@@ -9,10 +9,12 @@ import Profile from './pages/Navbar/Profile';
 import Result from './pages/Navbar/Result';
 import Forgotpassword from './pages/Navbar/Forgotpassword';
 import Search from './pages/Navbar/Search';
+import Subway from './assets/Subway - 6398.mp4';
 function App() {
   return (
     <Router>
     <Navbar />
+    <video src = {Subway} autoPlay loop muted />
     <div className='columnContainer'>
     <div className="container">
     <Routes>
@@ -26,11 +28,8 @@ function App() {
     </Routes>
     </div>
     </div>
-    </Router>
-     );
+  </Router>
+  
+  );
 }
-    export default App;
-    
-    
-
-
+export default App;
